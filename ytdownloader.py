@@ -2,12 +2,11 @@
 import os
 import pytube
 import customtkinter as ctk
-import tkinter as tk
 
 # The core of the app
 app = ctk.CTk()
 app.title("YT Downloader")
-app.iconbitmap("C:\\Users\\Toughpad\\Desktop\\Stuff\\Python_Stuff\\Assets\\Youtube.ico")
+app.iconbitmap("Here goes the ico icon")
 
 # The download function here
 def download_video():
@@ -26,9 +25,9 @@ def download_video():
                     # Create a directory for audio downloads if it doesn't exist
                     os.makedirs("Audio", exist_ok=True)
                     title = youtube.title
-                    audio_file_path = os.path.join("C:\\Users\\Toughpad\\Music\\audio", f"{title}.mp3")
-                    audio_stream.download(output_path="C:\\Users\\Toughpad\\Music\\audio", filename=title)
-                    os.rename(os.path.join("C:\\Users\\Toughpad\\Music\\audio", title), audio_file_path)
+                    audio_file_path = os.path.join("Here goes the path", f"{title}.mp3")
+                    audio_stream.download(output_path="Here goes the path", filename=title)
+                    os.rename(os.path.join("Here goes the path", title), audio_file_path)
 
             # Here the way to make a video instead of audio
             else:
@@ -37,7 +36,7 @@ def download_video():
                 if video_stream:
 
                     # Specify a custom output path for video downloads
-                    custom_output_path = "C:\\Users\\Toughpad\\Music"
+                    custom_output_path = "Here goes the path"
                     os.makedirs(custom_output_path, exist_ok=True)
                     title = youtube.title
                     video_file_path = os.path.join(custom_output_path, f"{title}.mp4")
